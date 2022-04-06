@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "2e32cd28-9e20-4ba4-8d63-b0fee9e20bfc",
+		"name": "CapgeminiSpringBoot2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PensionPlanDeduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pension-plan/deduct?companyPensionPlan=8500&personPensionPlan=1500&taxBase=60000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pension-plan",
+						"deduct"
+					],
+					"query": [
+						{
+							"key": "companyPensionPlan",
+							"value": "8500"
+						},
+						{
+							"key": "personPensionPlan",
+							"value": "1500"
+						},
+						{
+							"key": "taxBase",
+							"value": "60000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
