@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.springframework.boot.actuate.trace.http.HttpTraceRepository;
+import org.springframework.boot.actuate.trace.http.InMemoryHttpTraceRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -31,6 +33,11 @@ public class Swagger2UiConfiguration {
 				.apis(RequestHandlerSelectors
 						.basePackage("com.capgemini.demo.controller"))
 				.paths(PathSelectors.any()).build();
+	}
+
+	@Bean
+	public HttpTraceRepository htttpTraceRepository() {
+		return new InMemoryHttpTraceRepository();
 	}
 
 	private ApiInfo getApiInfo() {
